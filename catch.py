@@ -9,23 +9,30 @@ def getHtml(url):
     return page.text
 
 def getImg(html):
-    reg = r'src="(http.*?\.jpg)"'
+    reg = r'src=\"(http.*?\.[jpgne]+)\"'
     imgre = re.compile(reg)
     imglist = re.findall(imgre,html)
     return imglist
 
-num = 1
-def Dl(title):
-    for num in range(1,len(title)):
-        urllib.urlretrieve(title[num],'%s.jpg' % num)
-        num += 1
 
-urls = raw_input("put url:")
+def Dl(title):
+    for num in range(0,len(title)):
+        reg = r'\.([jpgen]+$)'
+        imgre = re.compile(reg)
+        filename = re.findall(imgre,title[num])
+        if filename[0] == 'jpg' : urllib.urlretrieve(title[num],'%s.jpg' % num)
+        elif filename[0] == 'png' : urllib.urlretrieve(title[num],'%s.png' % num)
+        elif filename[0] == 'jpeg' : urllib.urlretrieve(title[num],'%s.jpeg' % num)
+        else : urllib.urlretrieve(title[num],'%s.jpg' % num)
+
+urls = raw_input("input url:")
 
 try:
     html = getHtml(urls)
-except IOError:
-    print "Error: 没有找到url或读取url失败"
+except IOError as err:
+    print("I/O error: {0}".format(err))
+except ValueError:
+    print ("Error: url輸入錯誤")
 else:
     title = getImg(html)
     Dl(title)
