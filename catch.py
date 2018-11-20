@@ -17,7 +17,7 @@ def getImg(html):
 
 def Dl(title):
     for num in range(0,len(title)):
-        reg = r'\.([jpgne]+)'
+        reg = r'\.([jpgen]+$)'
         imgre = re.compile(reg)
         filename = re.findall(imgre,title[num])
         if filename[0] == 'jpg' : urllib.urlretrieve(title[num],'%s.jpg' % num)
