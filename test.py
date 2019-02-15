@@ -95,19 +95,40 @@ print("hello world")
 #     print("3次機會用完囉")
 
 
-r=[10,30,50,70,90]
-for grade in r :
-    print(grade,end=' ')
-print(end ="\n")
+# r=[10,30,50,70,90]
+# for grade in r :
+#     print(grade,end=' ')
+# print(end ="\n")
 
-average = sum(r)/ len (r)
-print ("平均成績"+str(average))
+# average = sum(r)/ len (r)
+# print ("平均成績"+str(average))
 
 
-for grade in r:
-    r[grade]=r[grade]**0.5*10
-    print (grade,end=' ')
-print(end ="\n")
+# for i in range(0,len(r)):
+#     r[i]=r[i]**0.5*10
+#     print (r[i],end=' ')
+# print(end ="\n")
+
+# new_average = sum(r)/ len (r)
+# print ("新平均成績"+str(new_average))
+
+
+s=["1",2,3,4,5]
+print (s[:])
+
+
+people=[]
+
+for i in range(0,10):
+    i=int(input("輸入數字")) 
+    people.append(i)
+print(people)
+
+for q in range(0,5):
+
+    a= int (input("頭在哪?"))
+    b= int (input("尾在哪?"))
+    print("總和"+str(sum(people[a:b])))
 
 
 
@@ -126,6 +147,8 @@ print(end ="\n")
 # print("--- test 字串 ---")
 # for test1 in c :
 #     print(test1)
+
+
 
 
 
