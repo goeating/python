@@ -63,7 +63,6 @@ print("hello world")
 # print(PIE)
 
 
-
 # p=["lynn",1,3,True]
 
 # print (len(p))
@@ -88,7 +87,7 @@ print("hello world")
 #     elif ans<guess:
 #       print("數字再小一點")
 #     else
-#       print("數字再大一點")  
+#       print("數字再大一點")
 # if ans ==guess :
 #     print("")
 # else:
@@ -113,23 +112,22 @@ print("hello world")
 # print ("新平均成績"+str(new_average))
 
 
-s=["1",2,3,4,5]
+s = ["1", 2, 3, 4, 5]
 print (s[:])
 
 
-people=[]
+people = []
 
-for i in range(0,10):
-    i=int(input("輸入數字")) 
+for i in range(0, 10):
+    i = int(input("輸入數字"))
     people.append(i)
 print(people)
 
-for q in range(0,5):
+for q in range(0, 5):
 
-    a= int (input("頭在哪?"))
-    b= int (input("尾在哪?"))
+    a = int(input("頭在哪?"))
+    b = int(input("尾在哪?"))
     print("總和"+str(sum(people[a:b])))
-
 
 
 # a = [['a','b'] , ['c','d']]
@@ -147,16 +145,3 @@ for q in range(0,5):
 # print("--- test 字串 ---")
 # for test1 in c :
 #     print(test1)
-
-
-
-
-
-
-
-
-
-
-
-
-
